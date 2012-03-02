@@ -1,0 +1,22 @@
+<h3>Επιλέξτε περιοχή που αναζητάτε <%= @profession.name %></h3>
+
+<table>
+  <tr>
+    <th>Όνομα Περιοχής</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @areas.each do |area| %>
+  <tr>
+    <td><%=  area.name %></td>
+    <td><%= link_to 'Show', [@profession, area] %></td>
+    <td><%= link_to 'Edit', edit_profession_area_path(@profession, area) %></td>
+    <td><%= link_to 'Destroy',[@profession, area], confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Area', new_profession_area_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @area.name %>
+</p>
+<% @doctors.each do |doctor| %>
+  <tr>
+	<td>Name: </td>
+    <td><%= doctor.name %></td>
+<tr>
+    <td><%= doctor.bio %></td>
+</tr>   
+ <td><%= doctor.image_url %></td>
+    <td><%= doctor.address %></td>
+    <td><%= doctor.area.name %></td>
+    <td><%= doctor.profession.name %></td>
+
+  </tr>
+<% end %>
+</table>
+
+
+

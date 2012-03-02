@@ -1,0 +1,33 @@
+<p>Κατάλογος ιατρών (<%= @profession.name %>) στον <%= @prarea.name %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Image url</th>
+    <th>Address</th>
+    <th>Area</th>
+    <th>Profession</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doctors.each do |doctor| %>
+  <tr>
+    <td><%= doctor.name %></td>
+    <td><%= doctor.bio %></td>
+    <td><%= doctor.image_url %></td>
+    <td><%= doctor.address %></td>
+    <td><%= doctor.area_id %></td>
+    <td><%= doctor.profession_id %></td>
+    <td><%= link_to 'Show', doctor %></td>
+    <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+    <td><%= link_to 'Destroy', doctor, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Doctor', new_doctor_path %>

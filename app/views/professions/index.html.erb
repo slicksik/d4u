@@ -1,0 +1,23 @@
+<h1>Listing professions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @professions.each do |profession| %>
+  <tr>
+    <td><%= profession.name %></td>
+    <td><%= link_to 'Show', profession %></td>
+    <td><%= link_to 'Edit', edit_profession_path(profession) %></td>
+    <td><%= link_to 'Destroy', profession, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profession', new_profession_path %>
