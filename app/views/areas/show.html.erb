@@ -1,24 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+	
+  <b>Περιοχή:</b>
   <%= @area.name %>
+<b>Ειδικότητα: </b>
+<%= @profession.name %>
 </p>
 <% @doctors.each do |doctor| %>
-  <tr>
-	<td>Όνομα Ιατρού: </td>
-    <td><%= doctor.name %></td>
-</tr>
-<tr>  
- <td><%= doctor.image_url %></td>
-</tr>
-    <td><%= doctor.address %></td>
-    <td><%= doctor.area.name %></td>
-    <td><%= doctor.profession.name %></td>
+<ul class = "doc-list">
+	<li>Όνομα Ιατρού: <%=  doctor.name %> </li>
+	<li>Διεύθυνση: <%= doctor.address%> </li>
+	</ul>
 
-  </tr>
 <% end %>
-</table>
 
 
 
