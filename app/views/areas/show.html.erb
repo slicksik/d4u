@@ -6,12 +6,12 @@
 </p>
 <% @doctors.each do |doctor| %>
   <tr>
-	<td>Name: </td>
+	<td>Όνομα Ιατρού: </td>
     <td><%= doctor.name %></td>
-<tr>
-    <td><%= doctor.bio %></td>
-</tr>   
+</tr>
+<tr>  
  <td><%= doctor.image_url %></td>
+</tr>
     <td><%= doctor.address %></td>
     <td><%= doctor.area.name %></td>
     <td><%= doctor.profession.name %></td>
