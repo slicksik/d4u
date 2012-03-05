@@ -18,7 +18,7 @@ class AreasController < ApplicationController
   
   def index
     
-    @areas = @profession.areas.group(:area_id).order(:name)
+    @areas = @profession.areas.group(:id).order(:name)
 
     respond_to do |format|
       format.html # index.html.erb
